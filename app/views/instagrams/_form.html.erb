@@ -10,15 +10,15 @@
     </div>
   <% end %>
 
-  <%= f.label :タイトル %>
-  <%= f.text_field :title, :size=>"50", class: 'form-control' %>
+  <%= f.label :タイトル  %>
+  <%= f.text_field :title,  class: 'form-control' %>
   <br>
   <%= f.label :写真 %>
   <%= f.file_field :image_url %>
   <br>
   <%= f.label :写真コメント %>
-  <%= f.text_field :content,:size=>"50", class: 'form-control' %>
+  <%= f.text_field :content,:size=>"10", class: 'form-control' %>
   <br>
-  <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
+  <%= f.submit '投稿', class: 'btn btn-primary btn-block', :size=>"10" %>
   <% end %>
 <%= link_to "写真一覧画面にもどる", instagrams_path %>

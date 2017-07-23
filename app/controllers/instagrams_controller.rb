@@ -19,7 +19,6 @@ class InstagramsController < ApplicationController
   @instagram.user_id = current_user.id
     if @instagram.save
       redirect_to instagrams_path, notice: "写真投稿しました！"
-      NoticeMailer.sendmail_instagram(@instagram).deliver
     else
       render 'new'
     end

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+    <% @instagrams.each do |instagram| %>
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            <%= profile_img(instagram.user) %>
+            <%= instagram.user.name %>
+        </div>
+        <div class="panel-body">
+          写真タイトル：<%= instagram.title %><br><br>
+          <%= image_tag(instagram.image_url, alt: '投稿写真',:size => "600x600") %>
+        </div>
+        <div class="panel-body">
+          <p>写真コメント：<%= instagram.content %></p>
+        </div>
+        <div class="panel-footer">
+          <%= link_to "編集", edit_instagram_path(instagram.id), class: 'btn btn-default btn-sm btn-success' %>
+          <%= link_to "削除", instagram_path(instagram.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger' %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

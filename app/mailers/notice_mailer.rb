@@ -1,15 +1,8 @@
 class NoticeMailer < ApplicationMailer
-  def sendmail_blog(blog)
-    @blog = blog
+  def sendmail_blog(instagram)
+    @instagram = instagram
 
-    mail to: @blog.user.email,
-         subject: '【Achieve】ブログが投稿されました'
-  end
-
-  def sendmail_contact(contact)
-  @contact = contact
-
-      mail to: @contact.email,
-       subject: '【Achieve】お問い合わせが完了しました'
+    mail to: @instagram.user.email,
+         subject: '投稿されました。'
   end
 end

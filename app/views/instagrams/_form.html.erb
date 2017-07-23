@@ -1,4 +1,4 @@
-<%= form_for(@instagram, url: choose_new_or_edit) do |f| %>
+<%= form_for(@instagram) do |f| %>
   <% if @instagram.errors.any? %>
     <div id="error_explanation">
       <h2><%= @instagram.errors.count %>件のエラーがあります。</h2>

@@ -3,6 +3,6 @@ class NoticeMailer < ApplicationMailer
     @instagram = instagram
 
     mail to: @instagram.user.email,
-         subject: '投稿されました。'
+         subject: '写真が投稿されました。'
   end
 end

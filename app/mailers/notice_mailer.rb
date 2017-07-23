@@ -1,5 +1,5 @@
 class NoticeMailer < ApplicationMailer
-  def sendmail_blog(instagram)
+  def sendmail_instagram(instagram)
     @instagram = instagram
 
     mail to: @instagram.user.email,
